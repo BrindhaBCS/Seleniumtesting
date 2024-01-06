@@ -12,6 +12,7 @@ if PARENT_PATH not in sys.path:
     sys.path.append(PARENT_PATH)
 import Data.Web as Web
 import Data.Api as Api
+import Data.Symphony as Sym
 
 
 class DataAccess(object):
@@ -79,6 +80,14 @@ class DataAccess(object):
     def get_Api_data_secured(self, fieldname, secured=True):
         "Gets data for the Api field name securely"
         return self.get_data("Api", fieldname, secured)
+    
+    def get_Sym_data(self, fieldname, secured=False):
+        "Gets data for the Web field name"
+        return self.get_data("Sym", fieldname, secured)
+
+    def get_Sym_data_secured(self, fieldname, secured=True):
+        "Gets data for the Web field name securely"
+        return self.get_data("Sym", fieldname, secured)
 
 
 class Counter(object):
@@ -106,6 +115,8 @@ wvar = d.get_Web_data                    # Access any Web data variable
 wvar_secured = d.get_Web_data_secured      # Access Web data variable without logging
 avar = d.get_Api_data                    # Access any Api data variable
 avar_secured = d.get_Api_data_secured      # Access Api data variable without logging
+symvar = d.get_Sym_data
+symvar_secured = d.get_Sym_data_secured
 
 
 if __name__ == "__main__":

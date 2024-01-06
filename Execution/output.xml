@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.12.1 on win32)" generated="20240102 16:06:18.554" rpa="false" schemaversion="3">
+<suite id="s1" name="GetAddon" source="C:\robo\Seleniumtesting\Tests\Resources\GetAddon.robot">
+<test id="s1-t1" name="RBT Logon" line="30">
+<kw name="Start Process" library="Process">
+<arg>${EXE_PAD}</arg>
+<doc>Starts a new process on background.</doc>
+<msg timestamp="20240102 16:06:18.643" level="INFO">Starting process:
+"C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe"</msg>
+<status status="PASS" starttime="20240102 16:06:18.643" endtime="20240102 16:06:18.643"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240102 16:06:23.643" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240102 16:06:18.643" endtime="20240102 16:06:23.643"/>
+</kw>
+<kw name="Connect To Session" library="CustomSapGuiLibrary">
+<doc>Connects to an open session SAP.</doc>
+<status status="PASS" starttime="20240102 16:06:23.643" endtime="20240102 16:06:23.643"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240102 16:06:28.643" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240102 16:06:23.643" endtime="20240102 16:06:28.643"/>
+</kw>
+<kw name="Open Connection" library="CustomSapGuiLibrary">
+<arg>RBT</arg>
+<doc>Opens a connection to the given connection name. Be sure to provide the full connection name, including the bracket part.</doc>
+<status status="PASS" starttime="20240102 16:06:28.643" endtime="20240102 16:06:29.144"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240102 16:06:34.145" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240102 16:06:29.144" endtime="20240102 16:06:34.145"/>
+</kw>
+<kw name="Input Text" library="CustomSapGuiLibrary">
+<arg>${FIELD_CLIENT}</arg>
+<arg>000</arg>
+<doc>Inserts the given text into the text field identified by locator.
+Use keyword `input password` to insert a password in a text field.</doc>
+<msg timestamp="20240102 16:06:34.145" level="INFO">Typing text '000' into text field 'wnd[0]/usr/txtRSYST-MANDT'.</msg>
+<status status="PASS" starttime="20240102 16:06:34.145" endtime="20240102 16:06:34.145"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240102 16:06:35.146" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240102 16:06:34.145" endtime="20240102 16:06:35.146"/>
+</kw>
+<kw name="Input Text" library="CustomSapGuiLibrary">
+<arg>${FIELD_USER}</arg>
+<arg>DDIC</arg>
+<doc>Inserts the given text into the text field identified by locator.
+Use keyword `input password` to insert a password in a text field.</doc>
+<msg timestamp="20240102 16:06:35.146" level="INFO">Typing text 'DDIC' into text field 'wnd[0]/usr/txtRSYST-BNAME'.</msg>
+<status status="PASS" starttime="20240102 16:06:35.146" endtime="20240102 16:06:35.146"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240102 16:06:36.146" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240102 16:06:35.146" endtime="20240102 16:06:36.146"/>
+</kw>
+<kw name="Input Password" library="CustomSapGuiLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<arg>Sym@rocks2023</arg>
+<doc>Inserts the given password into the text field identified by locator.
+The password is not recorded in the log.</doc>
+<msg timestamp="20240102 16:06:36.146" level="INFO">Typing password into text field 'wnd[0]/usr/pwdRSYST-BCODE'.</msg>
+<status status="PASS" starttime="20240102 16:06:36.146" endtime="20240102 16:06:36.146"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240102 16:06:38.147" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240102 16:06:36.146" endtime="20240102 16:06:38.147"/>
+</kw>
+<kw name="Send Vkey" library="CustomSapGuiLibrary">
+<arg>0</arg>
+<doc>Sends a SAP virtual key combination to the window, not into an element.
+If you want to send a value to a text field, use `input text` instead.</doc>
+<status status="PASS" starttime="20240102 16:06:38.147" endtime="20240102 16:06:38.413"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240102 16:06:43.413" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240102 16:06:38.413" endtime="20240102 16:06:43.413"/>
+</kw>
+<kw name="Take Screenshot" library="CustomSapGuiLibrary">
+<arg>loginpage.jpg</arg>
+<doc>Takes a screenshot, only if 'screenshots on error' has been enabled,
+either at import of with keyword `enable screenshots on error`.</doc>
+<msg timestamp="20240102 16:06:43.481" level="INFO" html="true">&lt;a href="loginpage.jpg"&gt;&lt;img src="loginpage.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240102 16:06:43.413" endtime="20240102 16:06:43.481"/>
+</kw>
+<status status="PASS" starttime="20240102 16:06:18.643" endtime="20240102 16:06:43.482"/>
+</test>
+<test id="s1-t2" name="Saint Transation Code" line="47">
+<kw name="Run Transaction" library="CustomSapGuiLibrary">
+<arg>/nSaint</arg>
+<doc>Runs a Sap transaction. An error is given when an unknown transaction is specified.</doc>
+<status status="PASS" starttime="20240102 16:06:43.483" endtime="20240102 16:06:43.680"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240102 16:06:48.682" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240102 16:06:43.680" endtime="20240102 16:06:48.682"/>
+</kw>
+<kw name="Click Element" library="CustomSapGuiLibrary">
+<arg>wnd[0]/usr/btnBUTTON_NEXT</arg>
+<doc>Performs a single click on a given element. Used only for buttons, tabs and menu items.</doc>
+<status status="PASS" starttime="20240102 16:06:48.682" endtime="20240102 16:06:48.803"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240102 16:06:50.805" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240102 16:06:48.804" endtime="20240102 16:06:50.805"/>
+</kw>
+<kw name="Take Screenshot" library="CustomSapGuiLibrary">
+<arg>saint2.jpg</arg>
+<doc>Takes a screenshot, only if 'screenshots on error' has been enabled,
+either at import of with keyword `enable screenshots on error`.</doc>
+<msg timestamp="20240102 16:06:50.874" level="INFO" html="true">&lt;a href="saint2.jpg"&gt;&lt;img src="saint2.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240102 16:06:50.805" endtime="20240102 16:06:50.874"/>
+</kw>
+<status status="PASS" starttime="20240102 16:06:43.483" endtime="20240102 16:06:50.874"/>
+</test>
+<test id="s1-t3" name="Get Cell Text From SAP Table" line="64">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>0</value>
+<value>${rowCount}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Get Table Cell Text" library="CustomSapGuiLibrary">
+<var>${cellText}</var>
+<arg>${tableId}</arg>
+<arg>${rowCount}</arg>
+<arg>0</arg>
+<doc>Returns the cell value for the specified cell.</doc>
+<msg timestamp="20240102 16:06:50.931" level="INFO" html="true">&lt;a href="sap-screenshot_4.jpg"&gt;&lt;img src="sap-screenshot_4.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240102 16:06:50.931" level="FAIL">ValueError: Cannot find Column_id '0'.</msg>
+<status status="FAIL" starttime="20240102 16:06:50.876" endtime="20240102 16:06:50.932"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${cellText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240102 16:06:50.932" endtime="20240102 16:06:50.932"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${quotedCellText}</var>
+<arg>'${cellText}'</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20240102 16:06:50.932" endtime="20240102 16:06:50.932"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${expectedText} in ${quotedCellText}</arg>
+<arg>Set Test Variable</arg>
+<arg>${foundRow}</arg>
+<arg>${i}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20240102 16:06:50.932" endtime="20240102 16:06:50.932"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Found text in row: ${foundRow}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240102 16:06:50.932" endtime="20240102 16:06:50.932"/>
+</kw>
+<kw name="Select Table Row" library="CustomSapGuiLibrary">
+<arg>${tableId}</arg>
+<arg>1</arg>
+<doc>Selects an entire row of a table. This can either be a TableControl or a GridView 'table_id'
+which is contained within a shell object. The row is an index to select the row, starting from 0.</doc>
+<status status="NOT RUN" starttime="20240102 16:06:50.932" endtime="20240102 16:06:50.933"/>
+</kw>
+<status status="FAIL" starttime="20240102 16:06:50.876" endtime="20240102 16:06:50.933"/>
+</iter>
+<status status="FAIL" starttime="20240102 16:06:50.876" endtime="20240102 16:06:50.933"/>
+</for>
+<status status="FAIL" starttime="20240102 16:06:50.875" endtime="20240102 16:06:50.933">ValueError: Cannot find Column_id '0'.</status>
+</test>
+<status status="FAIL" starttime="20240102 16:06:18.554" endtime="20240102 16:06:50.939"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="GetAddon">GetAddon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
