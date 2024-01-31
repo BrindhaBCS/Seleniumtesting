@@ -135,4 +135,5 @@ Process Until Finish Button Visible
     Take Screenshot    saint13.jpg    
 Capture Maintenance Certificate
     
-    
+**gbStart**vault1**splitKeyValue**vaultvalue1**gbEnd**
+**gbStart**vault2**splitKeyValue**vaultvalue2**gbEnd**
