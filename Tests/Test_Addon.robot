@@ -19,5 +19,3 @@ Selecting the path for the Addon
 
 Process Until Finish Button Visible
     Process Until Finish Button Visible
-**gbStart**vault1**splitKeyValue**vaultvalue1**gbEnd**
-**gbStart**vault2**splitKeyValue**vaultvalue2**gbEnd**
