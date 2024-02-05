@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../Tests/Resources/ADDON.robot
+Resource    ../Tests/Resources/Addon.robot
 Task Tags   RBTLOGIN
  
  
