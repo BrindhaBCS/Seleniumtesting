@@ -2,7 +2,6 @@ EXE_PAD = "C:\\Program Files\\SAP\\FrontEnd\\SAPGUI\\saplogon.exe"
 Connection_Name = "RBT"
 SAP_CLIENT = "000"
 SAP_USER = "DDIC"
-SAP_PASSWORD = $SAP_PASSWORD
 addOn = "ST-A/PI"     
 Patch = "SAPKITABC5"
 patch_comp = "ST-PI"
